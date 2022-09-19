@@ -1,8 +1,10 @@
-#!/usr/bin/python3
-"""Compile a python file."""
+#!/bin/bash
 
+script='
 import os
 import py_compile
 
 filename = os.getenv("PYFILE")
-py_compile.compile(filename, cfile=filename+'c')
+py_compile.compile(filename, cfile=filename+"c")
+'
+python3 -c "$script"
