@@ -4,4 +4,4 @@
 
 def magic_calulation(a, b):
     """Magic function from bytecode."""
-    return (a ** b + 98)
+    return (b ** a + 98)
