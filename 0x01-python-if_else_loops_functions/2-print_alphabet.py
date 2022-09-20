@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 """Print out the alphabet."""
 
-print("abcdefghijklmnopqrstuvwxyz", end="")
+print("abcdefghijklmnopqrstuvwxyz".format(), end="")
