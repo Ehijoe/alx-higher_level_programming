@@ -15,4 +15,4 @@ if last_digit > 5:
 elif last_digit == 0:
     value = "and is zero"
 
-print(f"The last digit of {number} is {last_digit} {value}")
+print(f"Last digit of {number} is {last_digit} {value}")
