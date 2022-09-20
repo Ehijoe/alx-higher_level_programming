@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 """Print out the alphabet."""
 
-print("abcdefghijklmnopqrstuvwxyz".format(), end="")
+for i in range(26):
+    print("{}".format(chr(i + 97)), end="")
