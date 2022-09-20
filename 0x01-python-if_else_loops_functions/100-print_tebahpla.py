@@ -2,4 +2,5 @@
 """Smile in the mirror."""
 
 for i in range(ord('z'), ord('a') - 1, -1):
-    print("{}".format(chr(i)), end="")
+    num = i if i % 2 == 0 else i - 32
+    print("{}".format(chr(num)), end="")
