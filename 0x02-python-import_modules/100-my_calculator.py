@@ -14,7 +14,8 @@ def main():
     operator = sys.argv[2]
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    print("{} {} {} = {}".format(a, operator, b, _get_operator_func(operator)))
+    print("{} {} {} = {}".format(a, operator, b,
+                                 _get_operator_func(operator)(a, b)))
 
 
 def _get_operator_func(operator):
