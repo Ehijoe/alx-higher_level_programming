@@ -4,48 +4,6 @@
 
 
 /**
- * stack_push - Put an item on the stack
- * @stack: The stack to push onto
- * @element: The element to push onto the stack
- *
- * Return: 1 if successful and 0 otherwise
- */
-int stack_push(listint_t **stack, int element)
-{
-	listint_t *new;
-
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-	{
-		return (0);
-	}
-	new->n = element;
-	new->next = *stack;
-	*stack = new;
-	return (1);
-}
-
-
-/**
- * stack_pop - Pop an item off the stack
- * @stack: The stack to pop off of
- *
- * Return: The value of the popped item
- */
-int stack_pop(listint_t **stack)
-{
-	listint_t *popped;
-	int value;
-
-	popped = *stack;
-	*stack = popped->next;
-	value = popped->n;
-	free(popped);
-	return (value);
-}
-
-
-/**
  * is_palindrome - Check if a linked list is a palindrome
  * @head: Pointer to the start of the list
  *
@@ -54,43 +12,42 @@ int stack_pop(listint_t **stack)
 int is_palindrome(listint_t **head)
 {
 	listint_t *slow, *fast;
-	listint_t *stack = NULL;
+	int i, len, *stack;
 
 	if (head == NULL)
 		return (-1);
 	if (*head == NULL)
 		return (1);
-	/* Find the middle of the list */
 	slow = *head;
 	if (slow->next == NULL)
 		return (1);
 	fast = slow;
+	len = 0;
 	while (fast != NULL && fast->next != NULL)
 	{
-		if (!stack_push(&stack, slow->n))
-		{
-			free_listint(stack);
-			return (-1);
-		}
 		slow = slow->next;
 		fast = fast->next->next;
+		len++;
 	}
-
-	/*
-	 * For an odd number of elements move slow
-	 * forward since there is a center element
-	 */
+	stack = malloc(sizeof(int) * len);
+	if (stack == NULL)
+		return (-1);
+	fast = *head;
+	for (i = 0; i < len; i++)
+	{
+		stack[i] = fast->n;
+		fast = fast->next;
+	}
 	slow = (fast != NULL) ? slow->next : slow;
-
-	/* Compare remaining elements to stack */
 	while (slow != NULL)
 	{
-		if (slow->n != stack_pop(&stack))
+		if (slow->n != stack[--len])
 		{
-			free_listint(stack);
+			free(stack);
 			return (0);
 		}
 		slow = slow->next;
 	}
+	free(stack);
 	return (1);
 }
