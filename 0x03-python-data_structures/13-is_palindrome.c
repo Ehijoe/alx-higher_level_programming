@@ -4,44 +4,39 @@
 
 
 /**
- * stack_push - Put an item on the stack
- * @stack: The stack to push onto
- * @element: The element to push onto the stack
+ * check_palindrome - Checks if a span is a palindrome
+ * @span: Span to check. Shifts end forward before returning
+ * @middle: Middle of the span
+ * @even: Whether the list has an even number of elements
  *
- * Return: 1 if successful and 0 otherwise
+ * Return: 1 if it is a palindrome and 0 otherwise
  */
-int stack_push(listint_t **stack, int element)
+int check_palindrome(list_span_t *span, listint_t *middle, int even)
 {
-	listint_t *new;
+	listint_t *curr;
 
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
+	curr = span->start;
+	if (curr->next == middle)
 	{
-		return (0);
+		if (!even)
+		{
+			span->end = curr;
+			return (1);
+		}
+		span->end = curr->next;
+		if (span->end->n == curr->n)
+			return (1);
+		else
+			return (0);
 	}
-	new->n = element;
-	new->next = *stack;
-	*stack = new;
-	return (1);
-}
-
-
-/**
- * stack_pop - Pop an item off the stack
- * @stack: The stack to pop off of
- *
- * Return: The value of the popped item
- */
-int stack_pop(listint_t **stack)
-{
-	listint_t *popped;
-	int value;
-
-	popped = *stack;
-	*stack = popped->next;
-	value = popped->n;
-	free(popped);
-	return (value);
+	span->start = span->start->next;
+	if (!check_palindrome(span, middle, even))
+		return (0);
+	span->end = span->end->next;
+	if (span->end->n == curr->n)
+		return (1);
+	else
+		return (0);
 }
 
 
@@ -54,7 +49,8 @@ int stack_pop(listint_t **stack)
 int is_palindrome(listint_t **head)
 {
 	listint_t *slow, *fast;
-	listint_t *stack = NULL;
+	int even;
+	list_span_t span;
 
 	if (head == NULL)
 		return (-1);
@@ -67,11 +63,6 @@ int is_palindrome(listint_t **head)
 	fast = slow;
 	while (fast != NULL && fast->next != NULL)
 	{
-		if (!stack_push(&stack, slow->n))
-		{
-			free_listint(stack);
-			return (-1);
-		}
 		slow = slow->next;
 		fast = fast->next->next;
 	}
@@ -82,15 +73,8 @@ int is_palindrome(listint_t **head)
 	 */
 	slow = (fast != NULL) ? slow->next : slow;
 
-	/* Compare remaining elements to stack */
-	while (slow != NULL)
-	{
-		if (slow->n != stack_pop(&stack))
-		{
-			free_listint(stack);
-			return (0);
-		}
-		slow = slow->next;
-	}
-	return (1);
+	span.start = *head;
+	even = (fast == NULL) ? 1 : 0;
+
+	return (check_palindrome(&span, slow, even));
 }
