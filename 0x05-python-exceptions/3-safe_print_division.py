@@ -7,9 +7,9 @@ def safe_print_division(a, b):
     ans = None
     try:
         ans = (a / b)
+        print("{} / {} = {}".format(a, b, ans))
     except (TypeError, ValueError, ZeroDivisionError):
         return None
     finally:
         print("Inside result: {}".format(ans))
-    print("{} / {} = {}".format(a, b, ans))
     return ans
