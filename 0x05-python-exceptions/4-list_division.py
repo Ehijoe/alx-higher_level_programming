@@ -4,7 +4,7 @@
 
 def list_division(my_list_1, my_list_2, list_length):
     """Divide each element in my_list_1 by the corresponding element."""
-    result = []
+    result = [0] * list_length
     try:
         for i in range(list_length):
             val = 0
@@ -15,7 +15,7 @@ def list_division(my_list_1, my_list_2, list_length):
             except ZeroDivisionError:
                 print("division by 0")
             finally:
-                result.append(val)
+                result[i] = val
     except IndexError:
         print("out of range")
     finally:
