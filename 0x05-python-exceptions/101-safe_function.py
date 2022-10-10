@@ -6,7 +6,7 @@ import sys
 def safe_function(fct, *args):
     """Execute a function safely."""
     try:
-        return fct(args)
+        return fct(*args)
     except BaseException as err:
         print("Exception:", err, file=sys.stderr)
         return None
