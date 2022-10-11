@@ -15,9 +15,11 @@
  */
 void print_python_float(PyObject *p)
 {
-	char repr[100] = {};
+	char repr[100];
 	int i;
 
+	for (i = 0; i < 100; i++)
+		repr[i] = '\0';
 	setbuf(stdout, NULL);
 	printf("[.] float object info\n");
 	if (strcmp(p->ob_type->tp_name, "float") != 0)
@@ -28,10 +30,12 @@ void print_python_float(PyObject *p)
 	sprintf(repr, "%1.15f", (double)((PyFloatObject *) p)->ob_fval);
 	for (i = 99; i > 0; i++)
 	{
-		if (repr[i] != '0')
+		if (repr[i] != '0' || repr[i] != '\0')
 			break;
 		repr[i] = '\0';
 	}
+	if (repr[i] == '.')
+		repr[i + 1] = '0';
 	printf("  value: %s\n", repr);
 }
 
