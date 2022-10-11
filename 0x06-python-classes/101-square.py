@@ -62,3 +62,4 @@ class Square:
             result += (" " * self.position[0]) + ("#" * self.size)
             if i != self.size - 1:
                 result += "\n"
+        return result
