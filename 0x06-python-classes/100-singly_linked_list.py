@@ -55,6 +55,8 @@ class SinglyLinkedList:
         result = ""
         curr = self.__head
         while curr is not None:
-            result += str(curr.data) + "\n"
+            result += str(curr.data)
+            if curr.next_node is not None:
+                result += "\n"
             curr = curr.next_node
         return result
