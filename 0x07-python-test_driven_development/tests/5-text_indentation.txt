@@ -1,0 +1,163 @@
+The ``5-text_indentation`` module
+=============================
+
+Using ``text_indentation``
+
+In this file, the term mark refers to one of '.', '?' and ':'
+----------------------
+
+Import ``text_indentation`` from the ``5-text_indentation`` module:
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test with a number:
+
+	>>> text_indentation(234)
+	Traceback (most recent call last):
+	  ...
+	TypeError: text must be a string
+
+
+	>>> text_indentation(23.54)
+	Traceback (most recent call last):
+	  ...
+	TypeError: text must be a string
+
+Test with a list:
+
+	>>> text_indentation(["a", "b"])
+	Traceback (most recent call last):
+	  ...
+	TypeError: text must be a string
+
+Test with a single-line string with no marks:
+
+	>>> text_indentation("Text with no marks")
+	Text with no marks
+
+Test with a single-line string that has a mark inside it
+
+	>>> text_indentation("Text with: a mark")
+	Text with:
+	<BLANKLINE>
+	a mark
+
+Test with a single-line string that ends with a mark
+
+	>>> text_indentation("Text with a mark.")
+	Text with a mark.
+	<BLANKLINE>
+
+Test with a single-line string that has multiple marks inside it:
+
+	>>> text_indentation("Text with: a mark. But with more text")
+	Text with:
+	<BLANKLINE>
+	a mark.
+	<BLANKLINE>
+	But with more text
+
+Test with a single-line string that has multiple marks and ends with a mark
+
+	>>> text_indentation("Text with: a mark.")
+	Text with:
+	<BLANKLINE>
+	a mark.
+	<BLANKLINE>
+
+Test with a multi-line string with no marks:
+
+	>>> text_indentation(
+	... """Text with no marks
+	... But with multiple lines
+	...
+	... Some with double spaces""")
+	Text with no marks
+	But with multiple lines
+	<BLANKLINE>
+	Some with double spaces
+
+Test with a multi-line string that has a mark
+
+	>>> text_indentation(
+	... """Text with a mark.
+	... But with multiple lines
+	...
+	... Some with double spaces""")
+	Text with a mark.
+	<BLANKLINE>
+	But with multiple lines
+	<BLANKLINE>
+	Some with double spaces
+
+Test with a multi-line string that ends with a mark
+
+	>>> text_indentation(
+	... """Text with a mark
+	... But with multiple lines
+	...
+	... Some with double spaces.""")
+	Text with a mark
+	But with multiple lines
+	<BLANKLINE>
+	Some with double spaces.
+	<BLANKLINE>
+
+Test with a multi-line string that has multiple marks inside it:
+
+	>>> text_indentation(
+	... """Text with a mark.
+	... But with multiple lines?
+	...
+	... Some with: double spaces""")
+	Text with a mark.
+	<BLANKLINE>
+	But with multiple lines?
+	<BLANKLINE>
+	Some with:
+	<BLANKLINE>
+	double spaces
+
+Test with a multi-line string that has multiple marks and ends with a mark
+
+	>>> text_indentation(
+	... """Text with: a mark.
+	... But with multiple lines
+	...
+	... Some with double spaces?""")
+	Text with:
+	<BLANKLINE>
+	a mark.
+	<BLANKLINE>
+	But with multiple lines
+	<BLANKLINE>
+	Some with double spaces?
+	<BLANKLINE>
+
+Test with whitespace after a token:
+
+	>>> text_indentation("Some text.  It had whitespace after it")
+	Some text.
+	<BLANKLINE>
+	It had whitespace after it
+
+Test with whitespace at start:
+
+	>>> text_indentation("    This string has whitespace before it.")
+	    This string has whitespace before it.
+	<BLANKLINE>
+
+Test empty string
+
+	>>> text_indentation("")
+	<BLANKLINE>
+
+Test consecutive tokens:
+
+	>>> text_indentation("Some text with:? two tokens.")
+	Some text with:
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	two tokens.
+	<BLANKLINE>
