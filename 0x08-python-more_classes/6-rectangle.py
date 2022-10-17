@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Rectangle."""
+"""Rectangle module."""
 
 
 class Rectangle:
     """A rectangle class."""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Create a new rectangle."""
@@ -56,7 +57,7 @@ class Rectangle:
             return ""
         for i in range(self.height):
             for i in range(self.width):
-                rect += "#"
+                rect += str(Rectangle.print_symbol)
             rect += "\n"
         return rect[:-1]
 
