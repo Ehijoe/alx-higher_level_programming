@@ -57,7 +57,10 @@ class Rectangle:
             return ""
         for i in range(self.height):
             for i in range(self.width):
-                rect += str(Rectangle.print_symbol)
+                if type(self.print_symbol) is str:
+                    rect += self.print_symbol
+                else:
+                    rect += str(self.print_symbol)
             rect += "\n"
         return rect[:-1]
 
