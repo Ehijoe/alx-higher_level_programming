@@ -150,7 +150,6 @@ Test with whitespace at start:
 Test empty string
 
 	>>> text_indentation("")
-	<BLANKLINE>
 
 Test consecutive tokens:
 

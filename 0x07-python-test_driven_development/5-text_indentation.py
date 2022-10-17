@@ -24,4 +24,4 @@ def text_indentation(text):
     if token_encoutered:
         print(result, end="")
     else:
-        print(result)
+        print(result, end="")
