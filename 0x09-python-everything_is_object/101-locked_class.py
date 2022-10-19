@@ -14,13 +14,3 @@ class LockedClass:
                 )
             )
         self.__dict__[name] = value
-
-    def __getattribute__(self, name):
-        """Return an attribute if valid."""
-        if name != "first_name":
-            raise AttributeError(
-                "'{}' object has no attribute '{}'".format(
-                    self.__class__.__name__, name
-                )
-            )
-        return self.__dict__[name]
