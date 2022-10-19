@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+i = 0
 def magic_string():
-    nonlocal i
-    return ["BestSchool" for j in range(i)].join(", ")
+    global i
+    return ", ".join(["BestSchool"] * (i := i + 1))
