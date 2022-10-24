@@ -1,0 +1,19 @@
+Tests for task 7
+
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+>>> test_obj = BaseGeometry()
+
+>>> test_obj.integer_validator("age", 21)
+
+>>> test_obj.integer_validator("name", "Ann")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> test_obj.integer_validator("length", -5)
+Traceback (most recent call last):
+ValueError: length must be greater than 0
+
+>>> test_obj.integer_validator("size", 0)
+Traceback (most recent call last):
+ValueError: size must be greater than 0
