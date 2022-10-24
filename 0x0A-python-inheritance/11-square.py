@@ -34,3 +34,22 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """Return the string representation of a rectangle."""
         return f"[Rectangle] {self.__width}/{self.__height}"
+
+
+class Square(Rectangle):
+    """A rectangle with a width equal to its height."""
+
+    def __init__(self, size):
+        """Create a square."""
+        self.integer_validator("size", size)
+        self.__size = size
+        self.__width = size
+        self.__height = size
+
+    def area(self):
+        """Return the area of the square."""
+        return self.__size ** 2
+
+    def __str__(self):
+        """Return the string representation of a square."""
+        return f"[Square] {self.__size}/{self.__size}"

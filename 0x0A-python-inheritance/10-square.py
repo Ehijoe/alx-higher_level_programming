@@ -33,7 +33,7 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """Return the string representation of a rectangle."""
-        return f"[Rectangel] {self.__width}/{self.__height}"
+        return f"[Rectangle] {self.__width}/{self.__height}"
 
 
 class Square(Rectangle):
