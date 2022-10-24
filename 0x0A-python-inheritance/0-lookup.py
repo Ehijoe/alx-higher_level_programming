@@ -4,4 +4,4 @@
 
 def lookup(obj):
     """Return a list of the attributes of obj."""
-    return list(obj.__dict__)
+    return sorted(list(obj.__dict__))
