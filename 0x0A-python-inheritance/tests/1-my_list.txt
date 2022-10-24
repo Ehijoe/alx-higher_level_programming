@@ -1,0 +1,5 @@
+Tests for task 1
+
+>>> test_list = MyList([1, 2, 5, 4])
+>>> test_list.print_sorted()
+[1, 2, 4, 5]
