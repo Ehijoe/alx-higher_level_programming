@@ -18,6 +18,8 @@ statuses = {
 def exit_program(signo, frame):
     """Handle the SIGINT signal."""
     for stat in statuses:
+        if statuses[stat] == 0:
+            continue
         sys.stdout.write(f"{stat}: {statuses[stat]}\n")
     sys.stdout.flush()
 
@@ -32,6 +34,8 @@ def main():
         if count == 10:
             count = 0
             for stat in statuses:
+                if statuses[stat] == 0:
+                    continue
                 sys.stdout.write(f"{stat}: {statuses[stat]}\n")
             sys.stdout.flush()
 
