@@ -11,8 +11,10 @@ def append_after(filename="", search_string="", new_string=""):
         return
     lines = content.split("\n")
     result = ""
-    for line in lines:
-        result += line + "\n"
+    for i, line in enumerate(lines):
+        result += line
+        if i != len(lines) - 1:
+            result += "\n"
         if search_string in line:
             result += new_string
     with open(filename, "w", encoding="utf-8") as output:
