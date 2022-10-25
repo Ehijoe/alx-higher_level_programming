@@ -4,6 +4,7 @@ import sys
 import signal
 
 statuses = {
+    "File size": 0,
     "200": 0,
     "301": 0,
     "400": 0,
@@ -21,6 +22,7 @@ def exit_program(signo, frame):
         if statuses[stat] == 0:
             continue
         sys.stdout.write(f"{stat}: {statuses[stat]}\n")
+    sys.stdout.write(f"File size: {total_size}")
     sys.stdout.flush()
 
 
@@ -30,6 +32,7 @@ def main():
     signal.signal(signal.SIGINT, exit_program)
     for line in sys.stdin:
         statuses[line.split()[-2]] += 1
+        statuses["File size"] += int(line.split()[-1])
         count += 1
         if count == 10:
             count = 0
