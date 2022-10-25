@@ -10,10 +10,10 @@ def append_after(filename="", search_string="", new_string=""):
     if content is None:
         return
     lines = content.split("\n")
-    result = []
+    result = ""
     for line in lines:
-        result.append(line)
+        result += line + "\n"
         if search_string in line:
-            result.append(new_string)
+            result += new_string
     with open(filename, "w", encoding="utf-8") as output:
-        output.write("\n".join(result))
+        output.write(result)
