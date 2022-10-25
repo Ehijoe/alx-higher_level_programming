@@ -15,16 +15,9 @@ statuses = {
 }
 
 
-def exit_program(signo, frame):
-    """Handle the SIGINT signal."""
-    for stat in statuses:
-        print(f"{stat}: {statuses[stat]}")
-
-
 def main():
     """Parse logs passed in as stdin."""
     count = 0
-    signal.signal(signal.SIGINT, exit_program)
     for line in sys.stdin:
         statuses[line.split()[-2]] += 1
         count += 1
