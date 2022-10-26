@@ -22,7 +22,7 @@ def exit_program(signo, frame):
         if statuses[stat] == 0:
             continue
         sys.stdout.write(f"{stat}: {statuses[stat]}\n")
-    sys.stdout.write(f"File size: {total_size}")
+    sys.stdout.write(f"File size: {statuses['File size']}")
     sys.stdout.flush()
 
 
@@ -41,6 +41,12 @@ def main():
                     continue
                 sys.stdout.write(f"{stat}: {statuses[stat]}\n")
             sys.stdout.flush()
+
+    for stat in statuses:
+        if statuses[stat] == 0:
+            continue
+        sys.stdout.write(f"{stat}: {statuses[stat]}\n")
+    sys.stdout.flush()
 
 
 if __name__ == '__main__':
