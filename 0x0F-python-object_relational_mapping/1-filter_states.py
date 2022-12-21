@@ -10,7 +10,7 @@ def main():
                          password=sys.argv[2],
                          db=sys.argv[3],
                          host="localhost",
-                         port=3000)
+                         port=3306)
     cur = db.cursor()
     cur.execute(
         "SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id ASC;"
