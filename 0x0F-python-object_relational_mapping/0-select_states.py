@@ -8,7 +8,8 @@ def main():
     """List the states in the database."""
     db = MySQLdb.connect(user=sys.argv[1],
                          password=sys.argv[2],
-                         db=sys.argv[3])
+                         db=sys.argv[3],
+                         port=3000)
     cur = db.cursor()
     cur.execute("SELECT id, name FROM states ORDER BY id ASC;")
     states = cur.fetchall()
