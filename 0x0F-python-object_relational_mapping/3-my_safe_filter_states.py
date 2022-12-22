@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """Write a script that lists all states from the database hbtn_0e_0_usa."""
-from sys import argv
+from sys import argv, exit
 import MySQLdb
 
 
 def main():
     """List the states in the database."""
+    if ';' in argv[4]:
+        exit()
     db = MySQLdb.connect(user=argv[1],
                          password=argv[2],
                          db=argv[3],
