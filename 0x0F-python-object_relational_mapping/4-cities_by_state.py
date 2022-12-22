@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 """Write a script that lists all states from the database hbtn_0e_0_usa."""
-from sys import argv, exit
+from sys import argv
 import MySQLdb
 
 
 def main():
     """List the states in the database."""
-    if ';' in argv[4]:
-        exit()
     db = MySQLdb.connect(user=argv[1],
                          password=argv[2],
                          db=argv[3],
@@ -15,7 +13,11 @@ def main():
                          port=3306)
     cur = db.cursor()
     cur.execute(
-        f"SELECT * FROM states WHERE name = '{argv[4]}' ORDER BY id ASC;"
+        """
+SELECT cities.id, cities.name, states.name FROM cities
+JOIN states ON state_id = states.id
+ORDER BY id ASC;
+"""
     )
     states = cur.fetchall()
 
