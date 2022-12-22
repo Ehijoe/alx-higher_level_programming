@@ -13,13 +13,17 @@ def main():
                          port=3306)
     cur = db.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name = %s ORDER BY id ASC;",
+        """
+SELECT name FROM cities
+WHERE state_id =
+(SELECT id FROM states WHERE name = %s)
+ORDER BY id ASC;
+""",
         (argv[4],)
     )
-    states = cur.fetchall()
+    cities = cur.fetchall()
 
-    for state in states:
-        print(state)
+    print(", ".join([city[0] for city in cities]))
 
     cur.close()
     db.close()
