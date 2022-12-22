@@ -18,6 +18,7 @@ def main():
     for state in states:
         print(state)
 
+    cur.close()
     db.close()
 
 
