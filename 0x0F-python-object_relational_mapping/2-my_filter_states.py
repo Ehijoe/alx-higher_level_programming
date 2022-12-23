@@ -13,7 +13,9 @@ def main():
                          port=3306)
     cur = db.cursor()
     cur.execute(
-        f"SELECT * FROM states WHERE name = '{argv[4]}' ORDER BY id ASC;"
+        "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC;".format(
+            argv[4]
+        )
     )
     states = cur.fetchall()
 
