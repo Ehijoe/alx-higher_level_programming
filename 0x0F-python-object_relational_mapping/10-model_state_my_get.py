@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Print the first state in the database."""
+"""Search for a state in the database."""
 from model_state import State, Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -12,9 +12,11 @@ if __name__ == '__main__':
     )
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).order_by(State.id).first()
-    if state is not None:
-        print(f"{state.id}: {state.name}")
+    state = session.query(State).filter(
+        State.name == argv[4]
+    ).order_by(State.id).first()
+    if state is None:
+        print("Not found")
     else:
-        print("Nothing")
+        print(f"{state.id}")
     Base.metadata.create_all(engine)
