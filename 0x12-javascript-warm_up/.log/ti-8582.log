@@ -1,0 +1,42 @@
+[18:57:26.699] Global cache location '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8', safe file path '/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/typingSafeList.json', types map path /home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/typesMap.json
+[18:57:26.700] Processing cache location '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8'
+[18:57:26.701] Trying to find '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/package.json'...
+[18:57:26.740] Loaded content of '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.619"},"devDependencies":{"@types/react":"^18.0.20","@types/react-dom":"^18.0.6","@types/read":"^0.0.29","@types/testing-library__jest-dom":"^5.14.5"}}
+[18:57:26.740] Loaded content of '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/package-lock.json'
+[18:57:26.829] Adding entry into typings cache: 'react' => '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/react/index.d.ts'
+[18:57:26.866] Adding entry into typings cache: 'react-dom' => '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/react-dom/index.d.ts'
+[18:57:26.986] Adding entry into typings cache: 'read' => '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/read/index.d.ts'
+[18:57:27.026] Adding entry into typings cache: 'testing-library__jest-dom' => '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/testing-library__jest-dom/index.d.ts'
+[18:57:27.026] Finished processing cache location '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8'
+[18:57:27.028] Process id: 8589
+[18:57:27.028] NPM location: "/usr/local/bin/npm" (explicit '--npmLocation' not  provided)
+[18:57:27.028] validateDefaultNpmLocation: true
+[18:57:27.028] Npm config file: /home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/package.json
+[18:57:27.029] Updating types-registry npm package...
+[18:57:27.029] Exec: "/usr/local/bin/npm" install --ignore-scripts types-registry@latest
+[18:57:31.935]     Succeeded. stdout:
+    
+    changed 1 package, and audited 59 packages in 4s
+
+4 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+[18:57:31.935] Updated types-registry npm package
+[18:57:32.022] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es5.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2016.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.dom.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.dom.iterable.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.scripthost.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.core.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2016.full.d.ts","/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up/0-javascript_is_amazing.js"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up","kind":"discover"}
+[18:57:32.053] Loaded safelist from types map file '/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/typesMap.json'
+[18:57:32.054] Explicitly included types: []
+[18:57:32.055] Inferred typings from unresolved imports: []
+[18:57:32.055] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up/bower_components","/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up/node_modules"]}
+[18:57:32.055] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up/bower_components","/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up/node_modules"]}
+[18:57:32.056] DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up/bower_components
+[18:57:32.057] DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:57:32.059] Elapsed:: 2.1810600012540817ms DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:57:32.059] DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up/node_modules
+[18:57:32.060] DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:57:32.060] Elapsed:: 0.18739499896764755ms DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x12-javascript-warm_up/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[18:57:32.060] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[18:57:32.061] Response has been sent.
+[18:57:32.061] No new typings were requested as a result of typings discovery
