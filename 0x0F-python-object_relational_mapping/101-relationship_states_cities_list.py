@@ -14,8 +14,6 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     Base.metadata.create_all(engine)
-    if 1 == 0:
-        print(City(name="asdf"))
 
     for state in session.query(State).all():
         print(f"{state.id}: {state.name}")
