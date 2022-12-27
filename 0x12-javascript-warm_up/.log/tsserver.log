@@ -1217,3 +1217,9 @@ Info 1103 [19:04:08.979] getCompletionData: Is inside comment: 0.016005998477339
 Info 1104 [19:04:08.980] getCompletionData: Get previous token: 0.10252200067043304
 Info 1105 [19:04:08.980] getCompletionsAtPosition: isCompletionListBlocker: 0.014225998893380165
 Info 1106 [19:04:08.984] getCompletionData: Semantic work: 3.8187940008938313
+Info 1107 [19:06:25.084] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 1108 [19:06:25.092] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 66 structureChanged: false structureIsReused:: Completely Elapsed: 7.151645999401808ms
+Info 1109 [19:06:25.092] Different program with same set of files
+Info 1110 [19:06:25.553] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 1111 [19:06:25.560] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 67 structureChanged: false structureIsReused:: Completely Elapsed: 6.927726000547409ms
+Info 1112 [19:06:25.560] Different program with same set of files
