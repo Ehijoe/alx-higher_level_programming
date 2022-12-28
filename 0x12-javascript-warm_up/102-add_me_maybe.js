@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-function addMeMoby (x, theFunction) {
+function addMeMaybe (x, theFunction) {
   theFunction(x + 1);
 }
 
-module.exports = { addMeMoby };
+module.exports = { addMeMaybe };
