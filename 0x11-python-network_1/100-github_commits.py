@@ -4,8 +4,12 @@ import requests
 import sys
 
 if __name__ == '__main__':
-    url = f"https://api.github.com/repos/{sys.argv[1]}/{sys.argv[2]}/commits"
-    resp = requests.get(url, params={"per_page": "10"})
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    url = f"https://api.github.com/repos/{sys.argv[2]}/{sys.argv[1]}/commits"
+    resp = requests.get(url, params={"per_page": "10"}, headers=headers)
     commits = resp.json()
     for commit in commits:
         print(f"{commit['sha']}: {commit['commit']['author']['name']}")
