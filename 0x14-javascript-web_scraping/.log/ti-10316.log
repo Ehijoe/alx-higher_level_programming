@@ -1,0 +1,48 @@
+[01:11:21.666] Global cache location '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8', safe file path '/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/typingSafeList.json', types map path /home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/typesMap.json
+[01:11:21.669] Processing cache location '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8'
+[01:11:21.669] Trying to find '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/package.json'...
+[01:11:21.672] Loaded content of '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.630"},"devDependencies":{"@types/react":"^18.0.20","@types/react-dom":"^18.0.6","@types/read":"^0.0.29","@types/request":"^2.48.8","@types/testing-library__jest-dom":"^5.14.5"}}
+[01:11:21.672] Loaded content of '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/package-lock.json'
+[01:11:21.725] Adding entry into typings cache: 'react' => '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/react/index.d.ts'
+[01:11:21.734] Adding entry into typings cache: 'react-dom' => '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/react-dom/index.d.ts'
+[01:11:21.737] Adding entry into typings cache: 'read' => '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/read/index.d.ts'
+[01:11:21.743] Adding entry into typings cache: 'request' => '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/request/index.d.ts'
+[01:11:21.758] Adding entry into typings cache: 'testing-library__jest-dom' => '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/testing-library__jest-dom/index.d.ts'
+[01:11:21.759] Finished processing cache location '/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8'
+[01:11:21.760] Process id: 10325
+[01:11:21.760] NPM location: "/usr/local/bin/npm" (explicit '--npmLocation' not  provided)
+[01:11:21.760] validateDefaultNpmLocation: true
+[01:11:21.760] Npm config file: /home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/package.json
+[01:11:21.760] Updating types-registry npm package...
+[01:11:21.761] Exec: "/usr/local/bin/npm" install --ignore-scripts types-registry@latest
+[01:11:25.562]     Succeeded. stdout:
+    
+    up to date, audited 68 packages in 3s
+
+4 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+[01:11:25.562] Updated types-registry npm package
+[01:11:27.348] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es5.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2016.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.dom.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.dom.iterable.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.scripthost.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.core.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.collection.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.generator.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.iterable.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.promise.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.proxy.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.reflect.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.symbol.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2016.array.include.d.ts","/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/lib.es2016.full.d.ts","/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/3-starwars_title.js"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping","kind":"discover"}
+[01:11:27.383] Loaded safelist from types map file '/home/ehijoe/emacs/distributions/webdev/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/typesMap.json'
+[01:11:27.384] Explicitly included types: []
+[01:11:27.385] Typing names in '/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/package.json' dependencies: ["request"]
+[01:11:27.385] Searching for typing names in /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/node_modules; all files: ["/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/node_modules/request/package.json"]
+[01:11:27.389]     Found package names: ["request"]
+[01:11:27.390] Inferred typings from unresolved imports: []
+[01:11:27.390] Result: {"cachedTypingPaths":["/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/request/index.d.ts"],"newTypingNames":[],"filesToWatch":["/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/bower_components","/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/package.json","/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/node_modules"]}
+[01:11:27.390] Finished typings discovery: {"cachedTypingPaths":["/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/request/index.d.ts"],"newTypingNames":[],"filesToWatch":["/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/bower_components","/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/package.json","/home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/node_modules"]}
+[01:11:27.391] DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/bower_components
+[01:11:27.392] DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[01:11:27.395] Elapsed:: 2.895253002643585ms DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[01:11:27.395] FileWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/package.json
+[01:11:27.395] FileWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/package.json 2000 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[01:11:27.397] DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/node_modules
+[01:11:27.397] DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[01:11:27.439] Elapsed:: 40.782660000026226ms DirectoryWatcher:: Added:: WatchInfo: /home/ehijoe/Documents/ALX/alx-higher_level_programming/0x14-javascript-web_scraping/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[01:11:27.439] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":["/home/ehijoe/emacs/distributions/webdev/.cache/typescript/4.8/node_modules/@types/request/index.d.ts"],"unresolvedImports":[],"kind":"action::set"}
+[01:11:27.440] Response has been sent.
+[01:11:27.440] No new typings were requested as a result of typings discovery
